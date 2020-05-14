@@ -22,8 +22,9 @@ nav{
     background-color: hotpink;
 }
 
-img{
-    width: 1890px;
+.banner{
+    width: 100%;
+    height: auto;
 }
 
 button{
