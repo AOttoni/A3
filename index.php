@@ -18,12 +18,17 @@
             <button>Cart</button>
             <button><a href="photos/carti.png">Carti</a></button> 
         </nav>
-        <main>
+        <main> 
             <?php foreach($products as $product){ ?>
-                <div>
-                    <a><?= $product.$name?></a>
-                </div>
+                <h2>
+                    <a><?= $product['name']?></a>
+                </h2>
+                <h3><?= $product['price']?></h3>
+                <p>-------------------------------------------</p>
             <?php  } ?> 
         </main>
+        <footer>
+            <p>penis</p>
+        </footer>
     </body>
 </html>

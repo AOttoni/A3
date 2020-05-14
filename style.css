@@ -3,7 +3,7 @@ body{
 
     display: grid;
     grid-template-columns: 100%;
-    grid-template-rows: 4fr 100px 5fr 2fr;
+    grid-template-rows: 1fr 100px 2fr 200px;
     grid-template-areas:"header"
                         "nav"
                         "main"
@@ -30,5 +30,10 @@ nav{
 button{
     border-radius: 16px;
     font-size:20px;
+}
+
+footer{
+    grid-area: footer;
+    background-color: darkslateblue;
 }
 
