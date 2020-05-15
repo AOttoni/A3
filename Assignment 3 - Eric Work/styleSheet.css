@@ -1,0 +1,236 @@
+body{
+    display:grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto auto;
+    grid-template-areas: "header"                        
+                          "aside"
+                          "nav";
+      background: url(icons/background2.jpg) no-repeat center center fixed;
+      /* background-position: center;
+      background-repeat: no-repeat; */
+      background-size: cover; 
+      
+}
+
+nav {
+    grid-area: "nav";
+    grid-template-columns: auto;
+    grid-template-rows: auto auto auto;
+    grid-template-areas: "subT" 
+                         "div" 
+                         "subT2";    
+    margin-bottom: 2%;
+    
+}
+
+div {
+    grid-area: "div";
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 2em;      
+}
+
+
+
+
+
+
+
+header {
+    grid-area: "header";
+    text-align: center;
+    color: aqua;
+    font-size: 30px;
+    letter-spacing: 0.1em;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;    
+    padding: 1em 5em 1em 5em;
+    margin-top:2%;    
+}
+
+main, nav {
+    background: rgba(0, 0, 0, 0.7);
+}
+
+main{
+    grid-area: "description";
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1em 0em 1em 0em;
+}
+
+p{    
+    display: flex;
+    text-align: center;    
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: aqua;        
+    margin: 1em 4em 1em 4em;    
+}
+
+
+h3 {   
+    text-align: center;
+    color: aqua;
+    font-size: 15px;
+    letter-spacing: 0.1em;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 1em 1em 1em 1em;
+    padding-bottom: 1em;
+}
+
+.subt{
+    grid-area: "subT";
+}
+
+.subt2{
+    grid-area:"subT2";
+}
+
+.menuLink{
+    color: darkorchid;
+    text-decoration: none;
+}
+
+.menuLink:hover{
+    color: rgb(0, 248, 41);
+    transition:ease-in .2s;
+}
+
+
+img{    
+    width:  150px;
+    height: 150px;
+    background-size:cover;
+    background-position:center;
+    margin: 2em 1em 2em 1em;    
+}
+
+.img1{
+    grid-area: "img1";
+}
+
+.img2{
+    grid-area: "img2";
+}
+
+.img3{
+    grid-area: "img3";
+}
+
+.img4{
+    grid-area: "img4";
+}
+
+img:hover {
+    filter:invert(1);
+    transition: ease-in .2s;
+}
+
+table{
+    grid-area:"table";
+    border-color: cyan; 
+    font-size: 15px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: aqua;
+    padding: 1em 1em 1em 1em;
+    margin-top: 2em;
+}
+
+td{
+    padding: 10px;
+}
+
+main{
+    display:grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto auto;
+    padding-bottom: 3em;
+}
+
+.numResultsTB {
+    grid-area: "tb";
+    text-align: center;
+    margin-top: 3em;
+}
+
+.numResultsBT{
+    grid-area: "btn";
+}
+
+@media screen and (min-width: 900px) {
+
+    body{
+        display:grid;
+        grid-template-columns: auto;
+        grid-template-rows: auto auto auto;
+        grid-template-areas: "header"                        
+                              "aside"
+                              "nav";
+          background: url(icons/background2.jpg) no-repeat center center fixed;
+          /* background-position: center;
+          background-repeat: no-repeat; */
+          background-size: cover;          
+    }
+
+    header{
+         font-size:60px;
+    }
+
+    p{
+       font-size: 25px;
+    }
+
+
+    nav {
+        grid-area: "nav";
+        grid-template-columns: auto;
+        grid-template-rows: auto auto;
+        grid-template-areas: "subT" "div";        
+        margin-bottom: 2%;        
+    }
+    
+    div {
+        
+        flex-direction: row;
+        justify-content: space-around;
+        padding-bottom: 2em;    
+    }
+
+    h3{
+        font-size: 25px;
+    }
+
+    img{    
+        width: 100px;
+        height: 100px;
+        background-size:cover;
+        background-position:center;
+        margin: 1em 1em 1em 1em;    
+    }
+}
+
+@media screen and (min-width: 1500px) {
+    header {
+        font-size:50px;
+    }
+
+    p{
+        font-size: 50px;
+    }
+
+    h3{
+        font-size: 50px;
+    }
+
+    img{    
+        width: 200px;
+        height: 200px;
+        background-size:cover;
+        background-position:center;
+        margin: 1em 1em 1em 1em;    
+    }
+    
+}

@@ -1,0 +1,53 @@
+<!DOCTYPE HTML>
+<html>
+    <link rel="stylesheet"
+    type="text/css"
+    href="styleSheet.css" />
+
+<script>
+// When the user scrolls the page, execute myFunction
+window.onscroll = function() {myFunction()};
+
+// Get the header
+var nav = document.getElementsByClassName("nav");
+
+// Get the offset position of the navbar
+var sticky = nav.offsetTop;
+
+// Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
+function myFunction() {
+  if (window.pageYOffset > sticky) {
+    nav.classList.add("sticky");
+  } else {
+    nav.classList.remove("sticky");
+  }
+}
+</script>
+
+<style src="styleSheet.css"></style>
+<body  background-size="contain">
+<nav>    
+    <div>
+        <a href="RocketsPage.html"><img class="img1" src="icons/info_Icon.svg" onmouseover="updateH(0)" onmouseout="revertH()"></img></a>
+        <a href="RocketsPage.html"><img class="img2" src="icons/bag_Icon.svg" onmouseover="updateH(0)" onmouseout="revertH()"></img></a>
+        <a href="HistoryPage.html"><img class="img3" src="icons/account_Icon.svg" onmouseover="updateH(1)" onmouseout="revertH()"></img></a>
+        <a href="UpcomingPage.html"><img class="img4" src="icons/cart_Icon.svg" onmouseover="updateH(2)" onmouseout="revertH()"></img></a>
+    </div>    
+</nav>
+
+
+
+<main>
+    <header>Welcome To Your Survival</header>
+    <p>
+        The Quarantine Survival Mart is an online store dedicated to selling overpriced “survival equipment” 
+        to those who think they need it during this pandemic. We sell all sorts of “essential” survival 
+        equipment. Really, anything from hand sanitizer to shotguns. We sell to anyone and everyone who 
+        has an internet connection and the will to live and one day tell their children how they survived 
+        this pandemic. Our biggest customers are middle-aged men and women, which is why our site will promote 
+        accessibility by being legible and easy to navigate through.
+    </p>    
+</main> 
+
+</body>
+</html>
