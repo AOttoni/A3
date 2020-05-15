@@ -3,32 +3,22 @@
 ?>
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Quarantine Supply</title>
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-        <header>
-            <img class="banner" src="photos/banner.png">
-        </header>
-        <nav>
-            <button>Products</button>
-            <button>About</button>
-            <button>Profile</button>
-            <button>Cart</button>
-            <button><a href="photos/carti.png">Carti</a></button> 
-        </nav>
+    <?php require_once("includes/head.php")?>
+    <body> 
+        <?php require_once("includes/header.php")?>
+        <?php require_once("includes/nav.php")?>
         <main> 
             <?php foreach($products as $product){ ?>
-                <h2>
-                    <a><?= $product['name']?></a>
-                </h2>
+                <form action="product-page.php" method="get">
+                    <h2>
+                        <a href="product-page.php"><?= $product['name']?></a>
+                        <input type="hidden" name=<?= $product['id']?>>
+                    </h2>
+                </form>
                 <h3><?= $product['price']?></h3>
                 <p>-------------------------------------------</p>
             <?php  } ?> 
         </main>
-        <footer>
-            <p>penis</p>
-        </footer>
+        <?php require_once("includes/footer.php")?>
     </body>
 </html>
