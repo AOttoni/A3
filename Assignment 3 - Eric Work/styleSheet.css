@@ -31,12 +31,6 @@ div {
         padding-bottom: 2em;      
 }
 
-
-
-
-
-
-
 header {
     grid-area: "header";
     text-align: center;
@@ -66,8 +60,11 @@ p{
     font-size: 10px;
     letter-spacing: 0.2em;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    color: aqua;        
-    margin: 1em 4em 1em 4em;    
+    color: aqua;    
+}
+
+.aboutUs{
+    margin: 1em 4em 1em 4em; 
 }
 
 
@@ -160,6 +157,54 @@ main{
     grid-area: "btn";
 }
 
+
+
+.productContainer{
+    display: grid;
+    grid-template-columns: 500px 500px;
+        
+}
+
+.productInfo{
+    display:flex;
+    flex-direction: column;
+}
+
+.productImg{
+    width:  500px;
+    height: 500px;
+    grid-area: "productImg";    
+    background-size:cover;
+    background-position:center;
+    margin: 2em 1em 2em 1em;   
+}
+
+.productName{
+    grid-area: "productName";
+    text-align: center;
+    color: aqua;
+    font-size: 15px;
+    letter-spacing: 0.1em;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 1em 1em 1em 1em;
+    padding-bottom: 1em;
+}
+
+.productDescription{
+    grid-area: "productDescription";
+    padding: 0,0,0,0;
+    margin: 0,0,0,0;
+    font-size: smaller;
+}
+
+.addToCartBtn{
+    grid-area: "addToCartBtn";
+
+}
+
+
+
+
 @media screen and (min-width: 900px) {
 
     body{
@@ -180,7 +225,7 @@ main{
     }
 
     p{
-       font-size: 25px;
+       font-size: 25px;       
     }
 
 
@@ -210,6 +255,7 @@ main{
         background-position:center;
         margin: 1em 1em 1em 1em;    
     }
+    
 }
 
 @media screen and (min-width: 1500px) {
@@ -232,5 +278,11 @@ main{
         background-position:center;
         margin: 1em 1em 1em 1em;    
     }
+
+    .productImg{
+        width:  500px;
+        height: 500px;           
+    }
+    
     
 }

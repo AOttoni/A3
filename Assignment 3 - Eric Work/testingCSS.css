@@ -1,0 +1,45 @@
+main{
+    display:grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto auto;
+    padding-bottom: 3em;
+}
+
+.productContainer{
+    display: grid;
+    grid-template-columns: 500px 500px;
+        
+}
+
+.productInfo{
+    display:flex;
+    flex-direction: column;
+}
+
+.productImg{
+    grid-area: "productImg";
+    
+    background-size:cover;
+    background-position:center;
+    margin: 2em 1em 2em 1em;   
+}
+
+.productName{
+    grid-area: "productName";
+    text-align: center;
+    color: aqua;
+    font-size: 15px;
+    letter-spacing: 0.1em;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 1em 1em 1em 1em;
+    padding-bottom: 1em;
+}
+
+.productDescription{
+    grid-area: "productDescription";
+}
+
+.addToCartBtn{
+    grid-area: "addToCartBtn";
+
+}
