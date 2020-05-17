@@ -18,6 +18,7 @@
                 <h3><?= $product['price']?></h3>
                 <p>-------------------------------------------</p>
             <?php  } ?> 
+            <script type="text/javascript" scr="main.js"></script>
         </main>
         <?php require_once("includes/footer.php")?>
     </body>
