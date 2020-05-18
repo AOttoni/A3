@@ -3,7 +3,11 @@ body{
 
     display: grid;
     grid-template-columns: 100%;
+<<<<<<< HEAD
     grid-template-rows: 1fr 100px 1000px 200px;
+=======
+    grid-template-rows: 1fr 180px 2fr 200px;
+>>>>>>> master
     grid-template-areas:"header"
                         "nav"
                         "main"
@@ -11,11 +15,11 @@ body{
 }
 
 header{
-    grid-area: header;
+    grid-area: "header";
 }
 
 nav{
-    grid-area: nav;
+    grid-area: "nav";
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -27,20 +31,40 @@ nav{
     height: auto;
 }
 
+.banner:hover{
+    filter:none;
+}
+
 button{
     border-radius: 4px;
     font-size:20px;
 }
 
 footer{
-    grid-area: footer;
+    grid-area: "footer";
     background-color: darkslateblue;
 }
 
+<<<<<<< HEAD
 .img1, .img2, .img3, .img4{    
     width:  75px;
     height: 75px;
+=======
+img:hover {
+    filter:invert(1);
+    transition: ease-in .2s;
+}
+
+.img1, .img2, .img3, .img4{    
+    width:  100px;
+    height: 100px;
+>>>>>>> master
     background-size:cover;
     background-position:center;
     margin: 2em 1em 2em 1em;    
 }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> master

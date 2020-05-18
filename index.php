@@ -1,5 +1,5 @@
 <?php
-    require_once("controllers/select.controller.php");
+    /*require_once("controllers/select.controller.php");*/
 ?>
 <!DOCTYPE html>
 <html>
