@@ -10,9 +10,9 @@ function updateH(x) {
         document.getElementById("subtitle").innerHTML = "Check out your Profile";
     if(x==3)
         document.getElementById("subtitle").innerHTML = "View your cart";
-  }
+}
   
-  //RESET HEADER CONTENT TO DEFAULT TITLE
-  function revertH() {
+//RESET HEADER CONTENT TO DEFAULT TITLE
+function revertH() {
     document.getElementById("subtitle").innerHTML = "Please Select an Option Below";
-  }
+}
