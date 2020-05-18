@@ -1,0 +1,71 @@
+
+.profileContainer{
+    grid-area: "profileContainer";
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:"mainInfo historyBtn"
+                        "addresses payments";
+
+
+
+
+}
+
+.mainInfo{
+    grid-area: "mainInfo";
+    display: flex;
+    flex-direction: column;     
+}
+
+.historyButton{
+    grid-area: "historyBtn";
+    height: 80%;
+    width: 80%;
+    align-self: center;    
+}
+
+.addresses{
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    grid-template-areas: "aHeader aBtn" 
+                         "aTable  aTable";
+}
+
+.aHeader{
+    grid-area: "aHeader";
+}
+
+.editAddressBtn{
+    grid-area: "aBtn";
+    height: 50px;
+    width: 50px; 
+
+}
+
+.aTable{
+    grid-area: "aTable";
+}
+
+.payments{
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    grid-template-areas: "eHeader eBtn" 
+                         "eTable  eTable";
+}
+
+.aHeader{
+    grid-area: "eHeader";
+}
+
+.editPaymentBtn{
+    grid-area: "eBtn";
+    height: 50px;
+    width: 50px; 
+}
+
+.eTable{
+    grid-area: "eTable";
+}
