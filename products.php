@@ -10,7 +10,7 @@
         <main> 
             <?php foreach($products as $product){ ?>
                 <h2>
-                    <a href="product-page.php?id=<?= $product['id']?>"><?= $product['name']?></a>
+                    <a href="product.php?id=<?= $product['id']?>"><?= $product['name']?></a>
                     <input type="hidden" name=<?= $product['id']?>>
                 </h2>
                 <h3><?= $product['price']?></h3>
