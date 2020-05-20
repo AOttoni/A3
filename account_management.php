@@ -6,7 +6,7 @@
         <?php require_once("includes/nav.php")?>
         <main> 
             <h2>Already Have An Account?</h2>
-            <button>Login</button>
+            <button><a href="login.php">Login</a></button>
             <h2>New to Survival?</h2>
             <button><a href="registration.php">Sign Up</a></button>
             <script type="text/javascript" src="main.js"></script>
