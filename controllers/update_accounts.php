@@ -6,7 +6,7 @@
     $password = $_GET['password'];
     $confPassword = $_GET['conf-password'];
     if($password != $confPassword){
-        header("Location: ../registration.php");
+        header("Location: ../registration.php?error=1");
     }
     else{
         $statement = $connection->prepare("INSERT INTO `customer` 

@@ -1,7 +1,8 @@
 <?php
 session_start();
 if (isset($_SESSION['name'])) {
-    require_once("controllers/select.controller.php");
+    require_once("controllers/cart.controller.php");
+    //require_once("controllers/product.controller.php");
 }
 ?>
 <!DOCTYPE html>
@@ -36,8 +37,7 @@ if (isset($_SESSION['name'])) {
             </table>
             <? }
             else { ?>
-            <p>You're not logged in! You need to <a href="login.php">login</a> before you can
-            manage your ToDos.</p>
+            <p>You're not logged in! You need to <a href="login.php">login</a></p>
             <?php } ?>    
             /*Maybe include a Continue Shopping Button*/ 
         </main>

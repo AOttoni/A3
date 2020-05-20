@@ -2,7 +2,7 @@
     require_once('database.controller.php');
     $email = $_GET['email'];
     $password = $_GET['password'];
-    $statement = $connection->prepare("SELECT `id`, `name` FROM `customer` WHERE `email` = ? AND `password` = ?");
+    $statement = $connection->prepare("SELECT `id`, `first_name` FROM `customer` WHERE `email` = ? AND `password` = ?");
     $statement->bind_param('ss', $email, $password);
     $statement->execute();
     $statement->store_result(); // This needs to be run before accessing num_rows.
@@ -10,6 +10,7 @@
         $statement->close();
         header('Location: ../login.php?error=1');
     }
+    $statement->bind_result($id, $name);
     $statement->fetch();
     $statement->close();
     session_start();

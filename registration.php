@@ -7,7 +7,7 @@
         <main> 
             <form action="controllers/update_accounts.php" method="get">
                 <?php if(isset($_GET['error']) && $_GET['error'] == 1) { ?>
-                    <p>Invalid Credentials</p>
+                    <p style = "color: red;">Invalid Credentials</p>
                 <?php } ?>
                 <input type="text" name="fname" placeholder="First Name">
                 <input type="text" name="lname"placeholder="Last Name">
