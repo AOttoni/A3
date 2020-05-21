@@ -1,6 +1,6 @@
 <?php
     session_start();
-    require_once("controllers/product.controller.php")
+    require_once("controllers/product.controller.php");
 ?>
 <!DOCTYPE html>
 <html>
@@ -14,9 +14,11 @@
             <?php require_once("includes/find-product-img.php")?>
             <img src="<?= $path?>">
             <h3><?= $products[0]['description']?></h3>
+            <?php if(isset($_SESSION['id'])){?>
             <button>
                 <a href="controllers/add-to-cart.controller.php?id=<?= $products[0]['id']?>">Add To Cart</a>
             </button>
+            <?php } ?>
         </main>
         <?php require_once("includes/footer.php")?>
     </body>

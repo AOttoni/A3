@@ -9,6 +9,9 @@
                 <?php if(isset($_GET['error']) && $_GET['error'] == 1) { ?>
                     <p style = "color: red;">Invalid Credentials</p>
                 <?php } ?>
+                <?php if(isset($_GET['success']) && $_GET['success'] == 1){?>
+                    <p style="color: green;"> Registration Successful</p>
+                <?php }?>
                 <input type="text" name="fname" placeholder="First Name">
                 <input type="text" name="lname"placeholder="Last Name">
                 <input type="email" name="email" placeholder="Your E-mail">

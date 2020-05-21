@@ -1,5 +1,8 @@
 <?php
     require_once('database.controller.php');
+    if(!isset($_GET['email']) || !isset($_GET['password'])){
+        header('Location: ../login.php?error=1');
+    }
     $email = $_GET['email'];
     $password = $_GET['password'];
     $statement = $connection->prepare("SELECT `id`, `first_name` FROM `customer` WHERE `email` = ? AND `password` = ?");

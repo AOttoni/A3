@@ -13,6 +13,7 @@
         WHERE customer_id = ? AND `product_id` = ?");
         $statement->bind_param('ii', $_SESSION['id'], $products[0]['id']);
         $statement->execute();
+        header("Location: ../cart.php");
     }
     else{
         $statement = $connection->prepare("INSERT INTO `cart` 
@@ -21,5 +22,5 @@
         $statement->bind_param('ii', $_SESSION['id'], $products[0]['id']);
         $statement->execute();
         $statement->close();
-        header("Location: ../products.php");
+        header("Location: ../cart.php");
     }

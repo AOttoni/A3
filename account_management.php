@@ -9,6 +9,10 @@
             <button><a href="login.php">Login</a></button>
             <h2>New to Survival?</h2>
             <button><a href="registration.php">Sign Up</a></button>
+            <h2>How Do We Take Your Money?</h2>
+            <button><a href="add_method.php">Add a Payment Method</a></button>
+            <h2>Where Do You And Your Family Live?</h2>
+            <button><a href="add_address.php">Add an Address</a></button>
             <script type="text/javascript" src="main.js"></script>
         </main>
         <?php require_once("includes/footer.php")?>

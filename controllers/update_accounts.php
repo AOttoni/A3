@@ -15,5 +15,5 @@
         $statement->bind_param('ssss', $fname, $lname, $email, $password);
         $statement->execute();
         $statement->close();
-        header("Location: ../products.php");
+        header("Location: ../registration.php?success=1");
     }
