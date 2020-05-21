@@ -2,7 +2,7 @@
 session_start();
 if (isset($_SESSION['name'])) {
     require_once("controllers/cart.controller.php");
-    //require_once("controllers/product.controller.php");
+    require_once("controllers/select.controller.php");
 }
 ?>
 <!DOCTYPE html>
@@ -30,6 +30,13 @@ if (isset($_SESSION['name'])) {
                             <td><?= $cart['qty']?></td>
                             <td><?= $product['price']?></td>  
                             <td><?= ($product['price'] * $cart['qty'])?></td>
+                            <td>
+                                <button>
+                                    <a href="controllers/remove-from-cart.controller.php?id=<?= $products[0]['id']?>">
+                                    Remove Item(s)
+                                    </a>
+                                </button>
+                            </td>
                             <?php }
                         }
                     }?>                                                                                                                  

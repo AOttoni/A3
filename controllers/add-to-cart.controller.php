@@ -9,7 +9,7 @@
     $statement->execute();
     $statement->store_result();
     if($statement->num_rows > 0){
-        $statement = $connection->prepare("UPDATE `cart` SET `quantity` = `qunatity` + 1 
+        $statement = $connection->prepare("UPDATE `cart` SET `quantity` = `quantity` + 1 
         WHERE customer_id = ? AND `product_id` = ?");
         $statement->bind_param('ii', $_SESSION['id'], $products[0]['id']);
         $statement->execute();
