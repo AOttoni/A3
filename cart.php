@@ -4,6 +4,7 @@ if (isset($_SESSION['name'])) {
     require_once("controllers/cart.controller.php");
     require_once("controllers/select.controller.php");
     require_once("controllers/get_payment_methods.controller.php");
+
 }
 ?>
 <!DOCTYPE html>
@@ -33,7 +34,6 @@ if (isset($_SESSION['name'])) {
                             <td><?= $cart['quantity']?></td>
                             <td><?= $product['price']?></td>  
                             <td><?= ($product['price'] * $cart['quantity'])?></td>
-                            <?= $total += $product['price'] * $cart['quantity'];?>
                             <td>
                                 <button>
                                     <a href="controllers/remove-from-cart.controller.php?id=<?= $product['id']?>">
@@ -41,26 +41,34 @@ if (isset($_SESSION['name'])) {
                                     </a>
                                 </button>
                             </td>
+                            <?= $total += $product['price'] * $cart['quantity'];?>
                             <?php }
                         }
                     }?>                                                                                                                  
                 </tr>                    
             </table>
             <h3>Total: <?= $total?></h3>
-            <button><a href="reciept.php?total=<?= $total?>">Check Out</a></button>
-            <select name="card_number">
-                <?php foreach($number as $card_numbers) {?>
-                    <option value=""><?= $number?></option>
-                <?php }?>
-            </select>
-            <? }
-            else { ?>
-            <p>You're not logged in! You need to <a href="login.php">login</a></p>
-            <?php } ?>
-            <button><a href="products.php">Continue Shopping</a></button>    
+            <form action="reciept.php" method="get">
+                <select name="card_number">
+                    <?php foreach($card_numbers as $number) {?>
+                        <option value="<?= $number['method_id']?>"><?= $number['card_number']?></option>
+                    <?php }?>
+                </select>
+                <?php require_once("controllers/get_address.controller.php");?>
+                <select name="address">
+                    <?php foreach($addresses as $address) {?>
+                        <option value="<?= $address['address_id']?>"><?= $address['address']?></option>
+                    <?php }?>
+                </select>
+                <? }
+                else { ?>
+                <p>You're not logged in! You need to <a href="login.php">login</a></p>
+                <?php } ?>
+                <input type="submit" value="Check Out">
+                <input type="hidden" value="<?= $total?>" name="total">
+                <button><a href="products.php">Continue Shopping</a></button>  
+            </form>  
         </main>
-        <footer>
-            <p>penis</p>
-        </footer>
+        <?php require_once("includes/footer.php")?>
     </body>
 </html>

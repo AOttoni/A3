@@ -10,10 +10,14 @@
         <?php require_once("includes/nav.php")?>
         <main>
             <h1><?= $products[0]['name']?></h1>
-            <h2><?= $products[0]['price']?></h2>
-            <?php require_once("includes/find-product-img.php")?>
-            <img src="<?= $path?>">
-            <h3><?= $products[0]['description']?></h3>
+            <div class="product">
+                <div class="product-info">
+                    <h2><?= $products[0]['price']?></h2>
+                    <?php require_once("includes/find-product-img.php")?>
+                    <h3><?= $products[0]['description']?></h3>
+                </div>
+                <img class="product-img" src="<?= $path?>">
+            </div>
             <?php if(isset($_SESSION['id'])){?>
             <button>
                 <a href="controllers/add-to-cart.controller.php?id=<?= $products[0]['id']?>">Add To Cart</a>
