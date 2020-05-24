@@ -34,7 +34,7 @@ main{
     align-items: center;
     background-color: aquamarine;
     padding-top: 5%;
-    padding-bottom: 5%;
+    padding-bottom: 10%;
 }
 
 .banner{
@@ -200,3 +200,4 @@ h1{
 .eTable{
     grid-area: "eTable";
 }
+

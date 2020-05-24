@@ -1,9 +1,9 @@
 <?php
 session_start();
-if (isset($_SESSION['name']) && isset($_SESSION['id'])) {
-    require_once("account_info.php");    
-}
-else{
+//if (isset($_SESSION['name']) && isset($_SESSION['id'])) {
+//    require_once("account_info.php");    
+//}
+//else{
 
 ?>
 
@@ -29,7 +29,7 @@ else{
 </html>
 
 <?php
-}
+//}
 
 
 ?>

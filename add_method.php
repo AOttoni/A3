@@ -8,6 +8,7 @@
         <?php require_once("includes/header.php")?>
         <?php require_once("includes/nav.php")?>
         <main>
+        <h1>Add A Payment Method</h1>
             <form action="controllers/add_method.controller.php" get="get">
                 <select name="type">
                     <option value="credit">Credit</option>

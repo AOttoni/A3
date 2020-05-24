@@ -8,6 +8,7 @@
         <?php require_once("includes/header.php")?>
         <?php require_once("includes/nav.php")?>
         <main>
+        <h1>Add An Address</h1>
             <form action="controllers/add_address.controller.php" get="get">
                 <input type="text" name="country" placeholder="Country">
                 <input type="text" name="city" placeholder="City">

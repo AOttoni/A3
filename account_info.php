@@ -8,7 +8,8 @@
     <body> 
         <?php require_once("includes/header.php")?>
         <?php require_once("includes/nav.php")?>
-        <main>        
+        <main>
+        <h1>My Profile</h1>        
         <div class="profileContainer">
             <div class="mainInfo">
                 <h1><?php $users[$_SESSION['id']]['first_name'] ?></h1>
