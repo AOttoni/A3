@@ -18,13 +18,7 @@
             this pandemic. Our biggest customers are middle-aged men and women, which is why our site will promote 
             accessibility by being legible and easy to navigate through.
             </p> 
-            <script type="text/javascript" src="main.js"></script>
-
-            <button>
-                <a href="includes/logout.php">
-                logout
-                </a>
-            </button>
+            <script type="text/javascript" src="main.js"></script>            
         </main>
         <?php require_once("includes/footer.php")?>
     </body>
