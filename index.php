@@ -9,7 +9,7 @@
         <?php require_once("includes/header.php")?>
         <?php require_once("includes/nav.php")?>
         <main>
-            <h1 class="about-header">About Us</h1>
+            <h1>About Us</h1>
             <p class="aboutUs">
             The Quarantine Survival Mart is an online store dedicated to selling overpriced “survival equipment” 
             to those who think they need it during this pandemic. We sell all sorts of “essential” survival 
@@ -19,6 +19,12 @@
             accessibility by being legible and easy to navigate through.
             </p> 
             <script type="text/javascript" src="main.js"></script>
+
+            <button>
+                <a href="includes/logout.php">
+                logout
+                </a>
+            </button>
         </main>
         <?php require_once("includes/footer.php")?>
     </body>

@@ -1,9 +1,10 @@
 body{
+    
     font-family: Arial, Helvetica, sans-serif;
 
     display: grid;
     grid-template-columns: 100%;
-    grid-template-rows: 1fr 100px 1500px 200px;
+    grid-template-rows: 1fr 100px auto 200px;
     grid-template-areas:"header"
                         "nav"
                         "main"
@@ -20,6 +21,20 @@ nav{
     justify-content: space-around;
     align-items: center;
     background-color: hotpink;
+}
+
+input{
+    height: 40px;
+    width: 120px;
+}
+
+main{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: aquamarine;
+    padding-top: 5%;
+    padding-bottom: 5%;
 }
 
 .banner{
@@ -47,11 +62,141 @@ footer{
     margin: 2em 1em 2em 1em;    
 }
 
+h1{
+    font-size: 50px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    padding-top: 5%;
+    
+}
+
 .aboutUs{
-    margin: 1em 4em 1em 4em; 
+    margin-left: 10%;
+    margin-right: 10%;
+    
+    font-size: 40px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-align: center;     
+    padding-bottom: 5%;
 }
 
 .product{
     display: flex;
     flex-direction: row;
+}
+
+
+
+.sort{
+    display:flex;
+    flex-direction: row;
+    align-content: center;
+    padding-bottom: 5%;
+}
+
+.sortOptionsA{
+    display:flex;
+    flex-direction: row;
+}
+
+.sortOptionsB{
+    display:flex;
+    flex-direction: row;
+}
+
+.productList{
+    margin-left: 10%;
+    margin-right: 10%;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;   
+}
+
+.product-img{
+    height:500px;
+    width:500px;
+}
+
+.product-cell{
+    padding-top: 5%;
+    padding-bottom: 5%;
+
+}
+
+.accountBtn{
+    height:100px;
+    width:200px;
+}
+
+
+.profileContainer{
+
+    padding-top: 10%;
+    margin-left: 10%;
+    margin-right: 10%;    
+    
+    grid-area: "profileContainer";
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:"mainInfo historyBtn"
+                        "addresses payments";
+
+}
+
+.mainInfo{
+    grid-area: "mainInfo";
+    display: flex;
+    flex-direction: column;     
+}
+
+.historyButton{
+    grid-area: "historyBtn";
+    height: 80%;
+    width: 80%;
+    align-self: center;    
+}
+
+.addresses{
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    grid-template-areas: "aHeader aBtn" 
+                         "aTable  aTable";
+}
+
+.aHeader{
+    grid-area: "aHeader";
+}
+
+.editAddressBtn{
+    grid-area: "aBtn";
+    height: 50px;
+    width: 50px; 
+
+}
+
+.aTable{
+    grid-area: "aTable";
+}
+
+.payments{
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    grid-template-areas: "eHeader eBtn" 
+                         "eTable  eTable";
+}
+
+.aHeader{
+    grid-area: "eHeader";
+}
+
+.editPaymentBtn{
+    grid-area: "eBtn";
+    height: 50px;
+    width: 50px; 
+}
+
+.eTable{
+    grid-area: "eTable";
 }

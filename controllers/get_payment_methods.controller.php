@@ -22,3 +22,4 @@ for ($i = 0; $i < count($customer_methods); $i++){
     $card_numbers[$i] = ['method_id' => $id, 'card_number' => $card_number];
 }  
 $statement->close();
+

@@ -4,7 +4,7 @@ if (isset($_SESSION['name'])) {
     require_once("controllers/cart.controller.php");
     require_once("controllers/select.controller.php");
     require_once("controllers/get_payment_methods.controller.php");
-
+    require_once("controllers/get_address.controller.php");
 }
 ?>
 <!DOCTYPE html>
@@ -14,6 +14,8 @@ if (isset($_SESSION['name'])) {
         <?php require_once("includes/header.php")?>
         <?php require_once("includes/nav.php")?>
         <main>
+
+        <h1>Cart</h1>
         <?php if (isset($_SESSION['name'])) {?>        
             <table border="1">
                 <thead>
